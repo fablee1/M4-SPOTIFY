@@ -12,7 +12,7 @@ const LeftNav = (props) => {
                 <NavLinkBtn to="/search" icon="fas fa-search text-center" title="Search" activeClassName="active" />
                 <NavLinkBtn to="/library" icon="fas fa-book text-center" title="Your Library" activeClassName="active" />
             </ul>
-            <LeftNavBottom loggedIn={false} />
+            <LeftNavBottom />
       </div>
     )
 }

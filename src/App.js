@@ -7,6 +7,7 @@ import Album from './components/Album/Album';
 import Artist from './components/Artist/Artist';
 
 function App() {
+  
   return (
     <div className="d-flex h-100" id="main-content">
       <Router>

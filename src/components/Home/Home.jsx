@@ -6,21 +6,21 @@ import { useState, useEffect } from 'react';
 
 const Home = (props) => {
 
-    const [topArtists, setTopArtists] = useState(null)
-    const [topAlbums, setTopAlbums] = useState(null)
+    // const [topArtists, setTopArtists] = useState(null)
+    // const [topAlbums, setTopAlbums] = useState(null)
 
-    useEffect(() => {
-        fetchTop("search?q=eminem", setTopAlbums)
-        fetchTop("search?q=a", setTopArtists)
-    }, [props.match.params.id])
+    // useEffect(() => {
+    //     fetchTop("search?q=eminem", setTopAlbums)
+    //     fetchTop("search?q=a", setTopArtists)
+    // }, [props.match.params.id])
 
-    const fetchTop = async (endpoint, callback) => {
-        const response = await fetch(`https://striveschool-api.herokuapp.com/api/deezer/${endpoint}`)
-        if(response.ok){
-            const data = await response.json()
-            callback(data)
-        }
-    }
+    // const fetchTop = async (endpoint, callback) => {
+    //     const response = await fetch(`https://striveschool-api.herokuapp.com/api/deezer/${endpoint}`)
+    //     if(response.ok){
+    //         const data = await response.json()
+    //         callback(data)
+    //     }
+    // }
 
     return (
         <MainLayout class="home">

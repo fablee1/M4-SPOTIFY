@@ -1,6 +1,11 @@
+import { useState } from "react"
+
 const LeftNavBottom = (props) => {
+
+    const [loggedIn, setLoggedIn] = useState(false)
+
     return (
-            props.loggedIn
+            loggedIn
             ? <div className="navbar-bottom">
                 <p className="d-block text-white navbar-bottom-text">
                     <i className="fas fa-arrow-circle-down mr-2"></i>
@@ -14,18 +19,18 @@ const LeftNavBottom = (props) => {
                     </a>
                 </div>
             </div>
-            : <LogInSignUp />
+            : <LogInSignUp login={setLoggedIn} />
     )
 }
 
 export default LeftNavBottom
 
 
-const LogInSignUp = () => {
+const LogInSignUp = (props) => {
     return (
         <>
-            <a className="d-flex justify-content-center" href="./login-page/login.html"><button type="button" className="btn rounded-pill btn-sign-up" >SIGN UP</button></a>
-            <a className="d-flex justify-content-center" href="./login-page/login.html"><button type="button" className="btn rounded-pill btn-log-in" >LOGIN</button></a>
+            <a className="d-flex justify-content-center"><button type="button" className="btn rounded-pill btn-sign-up" onClick={() => props.login(true)}>SIGN UP</button></a>
+            <a className="d-flex justify-content-center"><button type="button" className="btn rounded-pill btn-log-in" onClick={() => props.login(true)}>LOGIN</button></a>
             <div className='mx-auto d-flex flex-column nav-text-block'>
             <p className="nav-text-bottom m-0">Cookie    |    Privacy</p>
             <p className="nav-text-bottom"> Policy </p>  
