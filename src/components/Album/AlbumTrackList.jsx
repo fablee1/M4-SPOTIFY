@@ -24,7 +24,7 @@ const TrackItem = (props) => {
                     <i class="fas fa-music"></i>
                     {props.title}
                 </div>
-                <div class="timer">{props.duration}</div>
+                <div class="timer">{`${Math.floor(props.duration/60)}:${(props.duration%60).toFixed()}`}</div>
             </div>
             <div class="artist-name">{props.artist.name}</div>
         </li>

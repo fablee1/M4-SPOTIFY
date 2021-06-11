@@ -9,7 +9,7 @@ const HomeCardsRow = (props) => {
                 <Row>
                     {
                         props.cards?.map(card => (
-                            <SongCard cover={card.cover} title={card.title} />
+                            <SongCard cover={card.cover} title={card.title} type={card.type} id={card.id} />
                         ))
                     }
                 </Row>

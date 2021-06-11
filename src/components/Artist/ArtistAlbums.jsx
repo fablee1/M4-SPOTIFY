@@ -13,7 +13,7 @@ const ArtistAlbums = (props) => {
             <Container className="mb-3"> 
                 <Row>
                     {
-                        props.data?.map(album => <SongCard {...album} artistSection={true} artist={props.artist} id={album.id} />)
+                        props.data?.map(album => <SongCard {...album} artistSection={true} artist={props.artist} type="album" id={album.id} />)
                     }
                 </Row>
             </Container>

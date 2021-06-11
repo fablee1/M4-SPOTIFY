@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 const SongCard = (props) => {
     return (
         <Col sm={6} md={4} lg={3} xl={2}>
-            <Link to={`/album/${props?.id}`}>
+            <Link to={`/${props.type}/${props?.id}`}>
                 <div class="card">
                     <img class="card-img-top" src={props.cover} alt="Card" />
                     <div class="card-play-btn">
