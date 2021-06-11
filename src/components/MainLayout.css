@@ -1,0 +1,51 @@
+@import "keyframes.css";
+
+#body {
+    background: rgb(6,4,20);
+    background: linear-gradient(356deg, rgba(6,4,20,1) 15%, rgba(14,65,109,1) 58%, rgba(19,102,162,1) 100%);
+    color: white;
+    /* padding-left: 15px;
+    padding-right: 15px; */
+    /* padding-top: 30px; */
+    width: 100%;
+}
+
+#main-content {
+    padding-bottom: 82px;
+}
+
+@media (min-width: 1400px) {
+    .container {
+        max-width: 1450px;
+    }
+}
+
+@media (max-width: 576px) {
+    .navbar {
+        display: none!important;
+    }
+
+    #body {
+        margin-left: 0px!important;
+    }
+
+    .volume-bar {
+        flex: 0 1 0px;
+    }
+
+    .button_top {
+        font-size: 8px!important;
+    }
+
+    .heading {
+        font-size: 18px!important;
+    }
+
+    .random {
+        padding-bottom: 82px!important;
+    }
+}
+
+.home-nav {
+    padding-top: 30px;
+}
